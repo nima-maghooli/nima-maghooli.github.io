@@ -7,7 +7,7 @@
 		$from = $email; 
 		
 		// WARNING: Be sure to change this. This is the address that the email will be sent to
-		$to = 'YOUR_SPECIFIED_EMAIL_ADDRESS'; 
+		$to = 'nima.maghooli.97@gmail.com'; 
 		
 		$subject = "Message from ".$name." ";
 		
