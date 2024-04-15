@@ -1209,6 +1209,14 @@ section {
 
 
 .videoTest{
-  background: yellow;
-  color: red;
+width: 500px;
+  height: auto;
 }
+
+
+@media (max-width: 800px) {
+.videoTest{
+width: 90%;
+}
+}
+
