@@ -1,0 +1,39 @@
+0x1000, 0x1000, Unspecific error occurred 
+0x1080, 0x1088, Critical error occurred during boot-up 
+0x1090, 0x1090, Incompatible extension firmware version detected 
+0x2310, 0x2310, • Short circuit in motor winding • Controller gains too high and/or deceleration too high • Damaged power stage
+0x2320, 0x2320, • Short circuit of motor winding against ground • Short circuit of motor winding against operating voltage Vcc • Damaged power stage • Strong motor ripple (on top of a high peak current draw) • High deceleration or acceleration demands (which push the control to its limits) • Max. peak current configured which is close to the power stage current protection level • Poor current control parameter set • Sudden STO input interruption or loose contact
+0x3210, 0x3210, Power supply voltage too high 
+0x3220, 0x3220, • Supply voltage is too low for operation • Power supply cannot supply required acceleration current
+0x4210, 0x4210, Temperature at device’s power stage too high 
+0x4380, 0x4380, Temperature at motor too high or sensor not connected 
+0x5113, 0x5113, Logic supply voltage is too low for operation 
+0x5280, 0x5280, Hardware problem detected 
+0x5281, 0x5281, An incompatible hardware combination was detected 
+0x5480, 0x5483, A hardware problem was detected 
+0x6080, 0x6080, Problem with connection to extension 1: • Overload situation • Extension hardware failure 
+0x6081, 0x6081, Connection loss to extension 1: • Overload situation • Extension hardware failure
+0x6180, 0x61F0, An internal software error occurred 
+0x6320, 0x6320, Corrupt parameter detected: The constant velocity phase is too long due to high --> Target position and low --> Profile velocity 
+0x6380, 0x6380, Persistent parameters are corrupt or inconsistent (wrong CRC) 
+0x7320, 0x7320, Detected position of position sensor is no longer valid due to… • changed/wrong position sensor parameters • other errors that influence the absolute position detection (such as Hall Sensor Error, Position Sensor Index Error, etc.)
+0x7380, 0x7380, Position sensor supervision has detected a bad working condition due to… • wrong/broken wiring of encoder • defective encoder • regulation parameter are not well tuned (--> Current control parameter set)
+0x7381, 0x7381, • Encoder pulses counted between the first two index pulses do not fit the resolution • Setting of encoder resolution is wrong
+0x7382, 0x7382, Encoder index signal was not found within two turns at start-up due to… • incorrect wiring of encoder cables • encoder without or with defective index channel • wrong sensor type • setting for encoder resolution too low
+0x7388, 0x7388, Motor Hall sensors report an impossible signal combination due to… • incorrect wiring of Hall sensors • incorrect wiring of Hall sensor supply voltage • damaged Hall sensors • big Hall sensor signal noise
+0x7389, 0x7389, No Hall sensor 3 edge found within first motor turn due to… • wrong wiring of Hall sensors • defective Hall sensors • setting for encoder resolution too low
+0x738A, 0x738A, Angle difference measured between encoder and Hall sensors is too high due to… • wrong wiring of Hall sensors • defective Hall sensors • wrong wiring of encoder • defective encoder • wrong setting of encoder resolution or pole pairs
+0x738C, 0x738C, SSI sensor driver could not sample position data 
+0x738D, 0x738D, Invalid SSI sensor data frame. Start and/or stop bits have invalid state: • wrong wiring of SSI sensor • defective SSI sensor • wrong setting of encoder data bits
+0x7390, 0x7390, No main sensor available. Adapt settings in --> Axis configuration.
+0x7391, 0x7391, No commutation sensor available. Adapt settings in Axis configuration. 
+0x7392, 0x7392, Position sensor supervision has detected a turn-away of the motor in the opposite direction due to… • wrong setting of sensor polarity • wrong position sensor wiring • wrong motor wiring
+0x8110, 0x8110, One of the CAN mail boxes experienced an overflow caused by too high communication rate 
+0x8111, 0x8111, Execution of CAN communication had an overrun caused by too high communication rate 
+
+
+
+
+
+
+
