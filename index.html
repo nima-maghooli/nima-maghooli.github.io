@@ -893,7 +893,37 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mqknvwrp" method="post">
+              <fieldset id="fs-frm-inputs">
+                <div class="controls">
+                  <div class="form-group">
+                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">
+                      <div class="form-control-border"></div>
+                      <i class="form-control-icon fa fa-user"></i>
+                      <div class="help-block with-errors"></div>
+                  </div>
+
+                  <div class="form-group">
+                      <input id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">
+                      <div class="form-control-border"></div>
+                      <i class="form-control-icon fa fa-envelope"></i>
+                      <div class="help-block with-errors"></div>
+                  </div>
+
+                  <div class="form-group">
+                      <textarea id="form_message" name="message" class="form-control" placeholder="Message for me" rows="4" required="required" data-error="Please, leave me a message."></textarea>
+                      <div class="form-control-border"></div>
+                      <i class="form-control-icon fa fa-comment"></i>
+                      <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI" data-callback="correctCaptcha"></div>
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+              </fieldset>
+              <input type="submit" value="Submit">
+            </form>  
+
+            <!--<form action="forms/contact.php" method="post" role="form" class="php-email-form">
             <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -914,7 +944,7 @@
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            </form>-->
 
           </div>
 
