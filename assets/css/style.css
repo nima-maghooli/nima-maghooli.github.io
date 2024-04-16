@@ -1047,10 +1047,20 @@ section {
   color: #728394;
 }
 
-.contact .info .email,
+/*.contact .info .email,
 .contact .info .phone {
   margin-top: 40px;
+}*/
+
+.contact .info .email,
+.contact .info .address {
+  margin-top: 40px;
 }
+
+.contact .info .address {
+  margin-bottom: 40px;
+}
+
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
