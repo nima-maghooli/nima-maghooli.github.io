@@ -1231,7 +1231,18 @@ width: 100%;
 }
 }
 
-
 .g-recaptcha {
   margin-bottom: 20px;
 }
+
+/* CSS */
+#g-recaptcha-response {
+display: block !important;
+position: absolute;
+margin: -50px 0 0 0 !important;
+z-index: -999999;
+opacity: 0;
+}
+
+
+
