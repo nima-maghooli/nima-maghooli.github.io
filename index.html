@@ -896,15 +896,19 @@
 
 <form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/xgegreka" method="post" enctype=multipart/form-data>
   <fieldset id="fs-frm-inputs">
-    <label for="full-name">Your Name</label>
+    <!--<label for="full-name">Your Name</label>
     <input type="text" name="name" id="full-name" placeholder="Nima Maghooli" required="">
     <label for="email-address">Your Email or Telephone Number (Optional)</label>
     <input type="email" name="_replyto" id="email-address" placeholder="nima.maghooli@ut.ac.ir">
     <label for="telephone">Subject</label>
     <input type="telephone" name="telephone" id="telephone" placeholder="(+98) 937-635-6611"  required="">
-    <!--<input type="file" name="attachment">-->
+    <input type="file" name="attachment">
     <label for="complaint">Message</label>
-    <textarea rows="6" name="complaint" id="complaint" placeholder="I would like to talk about a project! When shall we have a meeting?" required=""></textarea>
+    <textarea rows="6" name="complaint" id="complaint" placeholder="I would like to talk about a project! When shall we have a meeting?" required=""></textarea>-->
+    <input type="text" name="name" id="full-name" placeholder="Your Name" required="">
+    <input type="email" name="_replyto" id="email-address" placeholder="Your Email or Telephone Number (Optional)">
+    <input type="telephone" name="telephone" id="telephone" placeholder="Subject"  required="">
+    <textarea rows="6" name="complaint" id="complaint" placeholder="Message" required=""></textarea>
     <div class="g-recaptcha" data-sitekey="6Ldv170pAAAAAL6a34dWnfhJ9ulT8BrwRPBl12eT" data-callback="correctCaptcha"></div>    
     <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
   </fieldset>
