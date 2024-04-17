@@ -893,7 +893,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-
+            
 <form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/xgegreka" method="post" enctype=multipart/form-data>
   <fieldset id="fs-frm-inputs">
     <!--<label for="full-name">Your Name</label>
@@ -905,6 +905,20 @@
     <input type="file" name="attachment">
     <label for="complaint">Message</label>
     <textarea rows="6" name="complaint" id="complaint" placeholder="I would like to talk about a project! When shall we have a meeting?" required=""></textarea>-->
+    <input type="text" name="name" class="form-control" id="full-name" placeholder="Your Name" required="">
+    <input type="email" name="_replyto" class="form-control" id="email-address" placeholder="Your Email or Telephone Number (Optional)">
+    <input type="telephone" name="telephone" class="form-control" id="telephone" placeholder="Subject"  required="">
+    <textarea rows="6" name="complaint" class="form-control" id="complaint" placeholder="Message" required=""></textarea>
+    <div class="g-recaptcha" data-sitekey="6Ldv170pAAAAAL6a34dWnfhJ9ulT8BrwRPBl12eT" data-callback="correctCaptcha"></div>    
+    <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
+  </fieldset>
+  <input type="submit" class="text-center" value="Send Message">
+
+</form>
+
+            
+<!--<form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/xgegreka" method="post" enctype=multipart/form-data>
+  <fieldset id="fs-frm-inputs">
     <input type="text" name="name" id="full-name" placeholder="Your Name" required="">
     <input type="email" name="_replyto" id="email-address" placeholder="Your Email or Telephone Number (Optional)">
     <input type="telephone" name="telephone" id="telephone" placeholder="Subject"  required="">
@@ -913,7 +927,7 @@
     <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
   </fieldset>
   <input type="submit" value="Send Message">
-</form>
+</form>-->
 
 
            
@@ -1024,7 +1038,7 @@
 #fs-frm fieldset.locale select[name="state"] {
   margin-right: 3%;
 }
-</style>
+</style>-->
 
             
             <!--<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mqknvwrp" method="post">
