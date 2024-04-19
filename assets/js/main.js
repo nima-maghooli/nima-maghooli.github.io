@@ -285,7 +285,6 @@ window.onload = function() {
 
 
   
-<script>
 function validateForm() {
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
@@ -302,7 +301,6 @@ function validateForm() {
         return false;
     }
 }
-</script>
 
 
 
