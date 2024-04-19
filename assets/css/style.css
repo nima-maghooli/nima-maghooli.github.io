@@ -1231,43 +1231,6 @@ width: 100%;
 }
 }
 
-/*.g-recaptcha {
-  margin-bottom: 20px;
-}
-
-#g-recaptcha-response {
-display: block !important;
-position: absolute;
-margin: -50px 0 0 0 !important;
-z-index: -999999;
-opacity: 0;
-}*/
-
-/*.g-recaptcha {
-    position: relative;
-    width: 100%;
-    background: #0563bb;
-    overflow: hidden;
-}
-
-.g-recaptcha > * {
-    float: right;
-    right: 0;
-    margin: -2px -2px -10px;
-}
-
-.g-recaptcha::after{
-    display: block;
-    content: "";
-    position: absolute;
-    left:0;
-    right:150px;
-    top: 0;
-    bottom:0;
-    background-color: #0563bb;
-    clear: both;
-}*/
-
 <style>
 @media only screen and (max-width: 500px) {
     .g-recaptcha {
