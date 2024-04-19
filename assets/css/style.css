@@ -1243,7 +1243,7 @@ z-index: -999999;
 opacity: 0;
 }*/
 
-.g-recaptcha {
+/*.g-recaptcha {
     position: relative;
     width: 100%;
     background: #0563bb;
@@ -1253,7 +1253,7 @@ opacity: 0;
 .g-recaptcha > * {
     float: right;
     right: 0;
-    margin: -2px -2px -10px;/*remove borders*/ 
+    margin: -2px -2px -10px;
 }
 
 .g-recaptcha::after{
@@ -1266,7 +1266,17 @@ opacity: 0;
     bottom:0;
     background-color: #0563bb;
     clear: both;
+}*/
+
+<style>
+@media only screen and (max-width: 500px) {
+    .g-recaptcha {
+        transform:scale(0.77);
+        transform-origin:0 0;
+    }
 }
+</style>
+
 
 .-my-4 { margin-top: -1rem; margin-bottom: -1rem; }
 
