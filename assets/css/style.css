@@ -1231,17 +1231,23 @@ width: 100%;
 }
 }
 
-.g-recaptcha {
+/*.g-recaptcha {
   margin-bottom: 20px;
 }
 
-/* CSS */
 #g-recaptcha-response {
 display: block !important;
 position: absolute;
 margin: -50px 0 0 0 !important;
 z-index: -999999;
 opacity: 0;
+}*/
+
+.g-recaptcha {
+    position: relative;
+    width: 100%;
+    background: #f9f9f9;
+    overflow: hidden;
 }
 
 .-my-4 { margin-top: -1rem; margin-bottom: -1rem; }
