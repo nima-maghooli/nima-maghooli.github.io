@@ -907,9 +907,14 @@
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" name="_replyto" class="form-control" id="email-address" placeholder="Your Email or Telephone Number" required="required" data-error="Please fill out this field.">
                 </div>
-                <div class="form-group mt-3">
-                <input type="telephone" name="telephone" class="form-control" id="telephone" placeholder="Subject"  required="required" data-error="Please fill out this field.">
+                <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="telephone" name="telephone" class="form-control" id="telephone" placeholder="Subject"  required="required" data-error="Please fill out this field.">
                 </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="photo_upload">Upload File (Optional) </label>
+                  <input type="file" class="form-control-file" id="file_upload" name="file_upload">
+                </div>  
                 <div class="form-group mt-3">
                 <textarea rows="6" name="complaint" class="form-control" id="complaint" placeholder="Message" required="required" data-error="Please fill out this field."></textarea>
                 </div>
@@ -917,8 +922,6 @@
                 <p>
                   
                 </p>
-                  <label for="photo_upload">Upload File (Optional) </label>
-                  <input type="file" class="form-control-file" id="file_upload" name="file_upload">
               </div>
                 <div class="g-recaptcha" data-sitekey="6Ldv170pAAAAAL6a34dWnfhJ9ulT8BrwRPBl12eT" data-callback="correctCaptcha"></div>
                 <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
@@ -928,7 +931,7 @@
 
           <script src='https://www.google.com/recaptcha/api.js?hl=fa'></script>
           <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=fi90d3ey&n=n1.ratufa.io"></script>    
-
+            
             <!--<form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/xgegreka" method="post" enctype=multipart/form-data>
               <fieldset id="fs-frm-inputs">
                 <div class="row">
