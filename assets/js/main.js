@@ -282,27 +282,5 @@ window.onload = function() {
   } 
 }
 
-
-
-  
-function validateForm() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var telephone = document.getElementById("telephone").value;
-    
-    var response = grecaptcha.getResponse();
-    if (name === "" || email === "" || telephone === "") {
-        alert("Please fill out all fields");
-        return false;
-    }
-    
-    if (response.length === 0) {
-        alert("Please complete the reCAPTCHA");
-        return false;
-    }
-}
-
-
-
   
 })()
