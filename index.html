@@ -898,222 +898,29 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            
-<form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/xgegreka" method="post" enctype=multipart/form-data>
-  <fieldset id="fs-frm-inputs">
-    <!--<label for="full-name">Your Name</label>
-    <input type="text" name="name" id="full-name" placeholder="Nima Maghooli" required="">
-    <label for="email-address">Your Email or Telephone Number (Optional)</label>
-    <input type="email" name="_replyto" id="email-address" placeholder="nima.maghooli@ut.ac.ir">
-    <label for="telephone">Subject</label>
-    <input type="telephone" name="telephone" id="telephone" placeholder="(+98) 937-635-6611"  required="">
-    <input type="file" name="attachment">
-    <label for="complaint">Message</label>
-    <textarea rows="6" name="complaint" id="complaint" placeholder="I would like to talk about a project! When shall we have a meeting?" required=""></textarea>-->
-    <div class="row">
-    <div class="col-md-6 form-group">
-      <input type="text" name="name" class="form-control" id="full-name" placeholder="Your Name" required="">
-    </div>
-    <div class="col-md-6 form-group mt-3 mt-md-0">
-      <input type="email" name="_replyto" class="form-control" id="email-address" placeholder="Your Email or Telephone Number (Optional)">
-    </div>
-    <div class="form-group mt-3">
-    <input type="telephone" name="telephone" class="form-control" id="telephone" placeholder="Subject"  required="">
-    </div>
-    <div class="form-group mt-3">
-    <textarea rows="6" name="complaint" class="form-control" id="complaint" placeholder="Message" required=""></textarea>
-    </div>
-    <div class="g-recaptcha" data-sitekey="6Ldv170pAAAAAL6a34dWnfhJ9ulT8BrwRPBl12eT" data-callback="correctCaptcha"></div>
-    <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
-  </fieldset>
-  <div class="text-center"><button type="submit">Send Message</button></div>
-  <!--<input type="submit" class="text-center" value="Send Message">-->
-</form>
-</div>
-            
-            
-            
-<!--<form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/xgegreka" method="post" enctype=multipart/form-data>
-  <fieldset id="fs-frm-inputs">
-    <input type="text" name="name" id="full-name" placeholder="Your Name" required="">
-    <input type="email" name="_replyto" id="email-address" placeholder="Your Email or Telephone Number (Optional)">
-    <input type="telephone" name="telephone" id="telephone" placeholder="Subject"  required="">
-    <textarea rows="6" name="complaint" id="complaint" placeholder="Message" required=""></textarea>
-    <div class="g-recaptcha" data-sitekey="6Ldv170pAAAAAL6a34dWnfhJ9ulT8BrwRPBl12eT" data-callback="correctCaptcha"></div>    
-    <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
-  </fieldset>
-  <input type="submit" value="Send Message">
-</form>-->
-
-
-           
-<!--<style>/* reset */
-#fs-frm input,
-#fs-frm select,
-#fs-frm textarea,
-#fs-frm fieldset,
-#fs-frm optgroup,
-#fs-frm label,
-#fs-frm #card-element:disabled {
-  font-family: inherit;
-  font-size: 100%;
-  color: inherit;
-  border: none;
-  border-radius: 0;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-#fs-frm label,
-#fs-frm legend,
-#fs-frm ::placeholder {
-  font-size: .825rem;
-  margin-bottom: .5rem;
-  padding-top: .2rem;
-  display: flex;
-  align-items: baseline;
-}
-
-/* border, padding, margin, width */
-#fs-frm input,
-#fs-frm select,
-#fs-frm textarea,
-#fs-frm #card-element {
-  border: 1px solid rgba(0,0,0,0.2);
-  background-color: rgba(255,255,255,0.9);
-  padding: .75em 1rem;
-  margin-bottom: 1.5rem;
-}
-#fs-frm input:focus,
-#fs-frm select:focus,
-#fs-frm textarea:focus {
-  background-color: white;
-  outline-style: solid;
-  outline-width: thin;
-  outline-color: gray;
-  outline-offset: -1px;
-}
-#fs-frm [type="text"],
-#fs-frm [type="email"] {
-  width: 100%;
-}
-#fs-frm [type="button"],
-#fs-frm [type="submit"],
-#fs-frm [type="reset"] {
-  width: auto;
-  cursor: pointer;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-}
-#fs-frm [type="button"]:focus,
-#fs-frm [type="submit"]:focus,
-#fs-frm [type="reset"]:focus {
-  outline: none;
-}
-#fs-frm [type="submit"],
-#fs-frm [type="reset"] {
-  margin-bottom: 0;
-}
-#fs-frm select {
-  text-transform: none;
-}
-
-#fs-frm [type="checkbox"] {
-  -webkit-appearance: checkbox;
-  -moz-appearance: checkbox;
-  appearance: checkbox;
-  display: inline-block;
-  width: auto;
-  margin: 0 .5em 0 0 !important;
-}
-
-#fs-frm [type="radio"] {
-  -webkit-appearance: radio;
-  -moz-appearance: radio;
-  appearance: radio;
-}
-
-/* address, locale */
-#fs-frm fieldset.locale input[name="city"],
-#fs-frm fieldset.locale select[name="state"],
-#fs-frm fieldset.locale input[name="postal-code"] {
-  display: inline;
-}
-#fs-frm fieldset.locale input[name="city"] {
-  width: 52%;
-}
-#fs-frm fieldset.locale select[name="state"],
-#fs-frm fieldset.locale input[name="postal-code"] {
-  width: 20%;
-}
-#fs-frm fieldset.locale input[name="city"],
-#fs-frm fieldset.locale select[name="state"] {
-  margin-right: 3%;
-}
-</style>-->
-
-            
-            <!--<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mqknvwrp" method="post">
+            <form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/xgegreka" method="post" enctype=multipart/form-data>
               <fieldset id="fs-frm-inputs">
-                <div class="controls">
-                  <div class="form-group">
-                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">
-                      <div class="form-control-border"></div>
-                      <i class="form-control-icon fa fa-user"></i>
-                      <div class="help-block with-errors"></div>
-                  </div>
-
-                  <div class="form-group">
-                      <input id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">
-                      <div class="form-control-border"></div>
-                      <i class="form-control-icon fa fa-envelope"></i>
-                      <div class="help-block with-errors"></div>
-                  </div>
-
-                  <div class="form-group">
-                      <textarea id="form_message" name="message" class="form-control" placeholder="Message for me" rows="4" required="required" data-error="Please, leave me a message."></textarea>
-                      <div class="form-control-border"></div>
-                      <i class="form-control-icon fa fa-comment"></i>
-                      <div class="help-block with-errors"></div>
-                  </div>
-                  <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI" data-callback="correctCaptcha"></div>
-                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-              </fieldset>
-              <input type="submit" value="Submit">
-            </form>  
-
-
-
-
-
-            
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-            <div class="row">
+                <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="full-name" placeholder="Your Name" required="">
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" name="_replyto" class="form-control" id="email-address" placeholder="Your Email or Telephone Number (Optional)">
                 </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
+                <div class="form-group mt-3">
+                <input type="telephone" name="telephone" class="form-control" id="telephone" placeholder="Subject"  required="">
+                </div>
+                <div class="form-group mt-3">
+                <textarea rows="6" name="complaint" class="form-control" id="complaint" placeholder="Message" required=""></textarea>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6Ldv170pAAAAAL6a34dWnfhJ9ulT8BrwRPBl12eT" data-callback="correctCaptcha"></div>
+                <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
+              </fieldset>
               <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>-->
-
+              <!--<input type="submit" class="text-center" value="Send Message">-->
+            </form>
+            </div>
+            
           </div>
 
         </div>
