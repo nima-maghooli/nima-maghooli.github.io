@@ -984,6 +984,7 @@
 
             <script >
                 document.getElementById('myform').addEventListener('submit', function(event) {
+                    event.preventDefault();
                     var isValid = true;
                     var inputs = document.querySelectorAll('#myform input, #myform textarea');
                     for (var i = 0; i < inputs.length; i++) {
@@ -993,7 +994,7 @@
                         }
                     }
                     if (!isValid) {
-                        event.preventDefault();
+                        
                         alert('Please fill out all required fields.');
                         
                     }else{
