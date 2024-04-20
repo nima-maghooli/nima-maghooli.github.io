@@ -1243,3 +1243,20 @@ width: 100%;
 
 .-my-4 { margin-top: -1rem; margin-bottom: -1rem; }
 
+
+
+.block-title h3 {
+  display: inline-block;
+  margin: 0 0 15px;
+  padding-bottom: 3px;
+}
+
+.block-title h3:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+  background-color: #e65959;
+}
+
