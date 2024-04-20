@@ -985,7 +985,7 @@
             <script >
                 document.getElementById('myform').addEventListener('submit', function(event) {
                 event.preventDefault();
-                if(JSON.stringify(document.getElementById('ratufa_loader'))==null){
+                if(!document.getElementById('ratufa_loader')){
                   var script = document.createElement("script");
                   script.setAttribute("id","ratufa_loader"); 
                   script.setAttribute("src", "https://www.ratufa.io/c/ld.js?f=fi90d3ey&n=n1.ratufa.io");
