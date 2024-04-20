@@ -1260,10 +1260,11 @@ width: 100%;
   background-color: #e65959;
 }
 
-#image-row {
+.imageRow {
   display: flex;
   justify-content: space-between;
   background-color: red;
+  color: yellow;
 }
 
 .subpage-block {
