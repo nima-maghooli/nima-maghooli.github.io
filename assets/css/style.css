@@ -1262,9 +1262,12 @@ width: 100%;
 
 .imageRow {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
   background-color: red;
-  color: yellow;
 }
 
 .subpage-block {
