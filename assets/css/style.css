@@ -1267,9 +1267,5 @@ width: 100%;
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
-  background-color: red;
-}
-
-.subpage-block {
-  margin-right: 0.5cm; /* تغییر این مقدار برای تنظیم فاصله دلخواه */
+  margin-top:2rem;
 }
