@@ -1260,3 +1260,11 @@ width: 100%;
   background-color: #e65959;
 }
 
+#image-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subpage-block {
+  margin-right: 0.5cm; /* تغییر این مقدار برای تنظیم فاصله دلخواه */
+}
