@@ -995,29 +995,30 @@
                 });
             </script>-->
 
-            <script>
-                document.getElementById('myform').addEventListener('submit', function(event) {
-                    event.preventDefault(); // متوقف کردن رفتار پیش‌فرض فرم
-                    var formData = new FormData(this); // ایجاد شیء FormData با اطلاعات فرم
-                    fetch(this.action, {
-                        method: this.method,
-                        body: formData
-                    })
-                    .then(response => {
-                        if (response.ok) {
-                            alert("Form submitted successfully!");
-                            // اینجا می‌توانید هر عملیات بعد از ارسال موفق فرم را انجام دهید
-                        } else {
-                            alert("Error: " + response.status);
-                            // در صورتی که درخواست ارسال فرم با خطا مواجه شود، پیام خطا نمایش داده می‌شود
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        // در صورت بروز خطا در فرآیند ارسال فرم، خطا در کنسول نمایش داده می‌شود
-                    });
-                });
-            </script>
+<script>
+    document.getElementById('myform').addEventListener('submit', function(event) {
+        event.preventDefault(); // متوقف کردن رفتار پیش‌فرض فرم
+        var formData = new FormData(this); // ایجاد شیء FormData با اطلاعات فرم
+        
+        // ارسال درخواست AJAX به سمت سرور
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', this.action);
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    alert("Form submitted successfully!");
+                    // اینجا می‌توانید هر عملیات بعد از ارسال موفق فرم را انجام دهید
+                } else {
+                    alert("Error: " + xhr.status);
+                    // در صورتی که درخواست ارسال فرم با خطا مواجه شود، پیام خطا نمایش داده می‌شود
+                }
+            }
+        };
+        xhr.send(formData);
+    });
+</script>
+
 
             
             <!--<form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/xgegreka" method="post" enctype=multipart/form-data>
