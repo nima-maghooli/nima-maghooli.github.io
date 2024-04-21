@@ -997,17 +997,28 @@
 
             <script>
                 document.getElementById('myform').addEventListener('submit', function(event) {
-                    if (!document.getElementById('ratufa_loader')) {
-                        var script = document.createElement("script");
-                        script.setAttribute("id","ratufa_loader"); 
-                        script.setAttribute("src", "https://www.ratufa.io/c/ld.js?f=fi90d3ey&n=n1.ratufa.io");
-                        document.head.appendChild(script);
-                    }
-                    else {
-                        this.submit(); // ارسال فرم در صورت وجود المان با id "ratufa_loader"
-                    }
+                    event.preventDefault(); // متوقف کردن رفتار پیش‌فرض فرم
+                    var formData = new FormData(this); // ایجاد شیء FormData با اطلاعات فرم
+                    fetch(this.action, {
+                        method: this.method,
+                        body: formData
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            alert("Form submitted successfully!");
+                            // اینجا می‌توانید هر عملیات بعد از ارسال موفق فرم را انجام دهید
+                        } else {
+                            alert("Error: " + response.status);
+                            // در صورتی که درخواست ارسال فرم با خطا مواجه شود، پیام خطا نمایش داده می‌شود
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        // در صورت بروز خطا در فرآیند ارسال فرم، خطا در کنسول نمایش داده می‌شود
+                    });
                 });
             </script>
+
             
             <!--<form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/xgegreka" method="post" enctype=multipart/form-data>
               <fieldset id="fs-frm-inputs">
