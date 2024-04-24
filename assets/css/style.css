@@ -1274,3 +1274,14 @@ width: 100%;
 .imageRow a{
   margin-bottom:1rem;
 }
+
+/* _forms.scss:71 */
+.form-control-file {
+  .was-validated &:#{$state},
+  &.is-#{$state} {
+    ~ .#{$state}-feedback,
+    ~ .#{$state}-tooltip {
+      display: block;
+    }
+  }
+}
