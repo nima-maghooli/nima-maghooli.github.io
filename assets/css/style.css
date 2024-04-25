@@ -1269,11 +1269,18 @@ width: 100%;
   flex-wrap: wrap;
   align-content: center;
   margin-top:2rem;
+
+  img:hover {
+      transform: scale(1.1);
+      transition: transform 0.5s ease;
+  }
+ 
 }
 
 .imageRow a{
   margin-bottom:1rem;
 }
+
 
 /* _forms.scss:71 */
 .form-control-file {
