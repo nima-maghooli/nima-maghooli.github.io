@@ -1030,46 +1030,6 @@
 
           <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=fi90d3ey&n=n1.ratufa.io"></script>
           <script src="https://www.google.com/recaptcha/api.js?explicit&hl=en"></script>
-
-
-<script>
-	$( function() {
-		$( '#form-id' ).on( 'submit', ajaxForm );
-	} );
-	
-	function ajaxForm( evt ) {
-		evt.preventDefault();
-		
-		var $form = $( this );
-		var data = $form.serializeObject();
-	
-		$.post( $form.attr( 'action' ), data, function( response ) {
-			alert( response );
-		} );
-	}
-	
-	( function( $, undefined ){
-		'$:nomunge'; // Used by YUI compressor.
-	
-		$.fn.serializeObject = function(){
-			var obj = {};
-	
-			$.each( this.serializeArray(), function( i, o ){
-				var n = o.name,
-					v = o.value;
-	
-					obj[n] = obj[n] === undefined ? v
-						: $.isArray( obj[ n ] ) ? obj[ n ].concat( v )
-						: [ obj[n], v ];
-			});
-	
-			return obj;
-		};
-	
-	} )( jQuery );
-</script>
-
-
             
             <!--<form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/xgegreka" method="post" enctype=multipart/form-data>
               <fieldset id="fs-frm-inputs">
