@@ -1275,7 +1275,7 @@ width: 100%;
   }
   
   img:hover {
-      transform: scale(1.5);
+      transform: scale(1.3);
   }
   
   img:not(:hover) {
