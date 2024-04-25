@@ -1001,12 +1001,12 @@
                     <input type="text" name="FullName" id="FullName" placeholder="Your Name" required="required" class="form-control"/>
                   </div>
                   <div class="col-md-6">  
-                    <input type="email" class="form-control" name="Email" id="Email"/>
+                    <input type="email" class="form-control" name="Email" id="Email" placeholder="Your Email" required="required"/>
                   </div>
                 </div>
                 <div class="row mb-3">  
                   <div class="col-md-6">  
-                    <input type="text" name="Textbox" id="Textbox" class="form-control"/>
+                    <input type="text" name="Textbox" id="Textbox" class="form-control" placeholder="Subject" required="required"/>
                   </div>
                   <div class="col-md-6">  
                     <input type="file" class="form-control" name="SimpleFileUpload" id="SimpleFileUpload"/>
@@ -1014,9 +1014,12 @@
                 </div>
                 <div class="row mb-3">  
                   <div class="col-md-12">  
-                    <textarea name="Message" class="form-control" id="Message" rows="6" maxlength="2048"></textarea>
+                    <textarea name="Message" class="form-control" id="Message" rows="6" maxlength="2048" placeholder="Message" required="required"></textarea>
                   </div>
                 </div>
+                <p> </p>
+                <div class="g-recaptcha" data-sitekey="6Ldv170pAAAAAL6a34dWnfhJ9ulT8BrwRPBl12eT" data-callback="correctCaptcha" required></div>
+                <p> </p>
                 <div class="row mb-3">  
                   <div class="col-md-6 d-flex align-items-center">  
                     <button class="btn btn-lg px-4" style="background-color:#007bff;border-color:#007bff;color:white;" type="submit">Submit</button>
@@ -1026,6 +1029,7 @@
             </div>
           
           <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=fi90d3ey&n=n1.ratufa.io"></script>
+          <script src="https://www.google.com/recaptcha/api.js?explicit&hl=en"></script>
 
             <!--<form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/xgegreka" method="post" enctype=multipart/form-data>
               <fieldset id="fs-frm-inputs">
