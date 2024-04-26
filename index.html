@@ -918,7 +918,58 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">         
 
-            <form id="myform" name="myform" accept-charset="utf-8" method="post" enctype=multipart/form-data>
+
+            <div class="container">  
+              <form method="post" id="myform">  
+                <div class="row mb-3">  
+                  <div class="col-md-6">  
+                    <input type="text" class="form-control" name="FullName" id="FullName" placeholder="Your Name"/>
+                  </div>
+                  <div class="col-md-6">  
+                    <input type="email" class="form-control" name="Email" id="Email" placeholder="Your Email"/>
+                  </div>
+                </div>
+                <div class="row mb-3">  
+                  <div class="col-md-6">  
+                    <input type="text" name="Textbox" id="Textbox" class="form-control" placeholder="Subject"/>
+                  </div>
+                  <div class="col-md-6">  
+                    <input type="file" class="form-control" name="SimpleFileUpload" id="SimpleFileUpload"/>
+                  </div>
+                </div>
+                <div class="row mb-3">  
+                  <div class="col-md-12">  
+                    <textarea name="Message" class="form-control" id="Message" rows="5" maxlength="2048" placeholder="Message"></textarea>
+                  </div>
+                </div>
+                <div class="row mb-3">  
+                  <div class="col-md-6">  
+                    <div class="g-recaptcha" data-sitekey="6Ldv170pAAAAAL6a34dWnfhJ9ulT8BrwRPBl12eT" data-callback="correctCaptcha"></div>
+                  </div>
+                  <div class="col-md-6 d-flex align-items-center">  
+                    <button class="btn btn-lg px-4" style="background-color:#007bff;border-color:#007bff;color:white;" type="submit">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <script src="https://www.google.com/recaptcha/api.js?explicit&hl=en"></script>
+
+            <script >
+                document.getElementById('myform').addEventListener('submit', function(event) {
+                event.preventDefault();
+                if(!document.getElementById('ratufa_loader')){
+                  var script = document.createElement("script");
+                  script.setAttribute("id","ratufa_loader"); 
+                  script.setAttribute("src", "https://www.ratufa.io/c/ld.js?f=fi90d3ey&n=n1.ratufa.io");
+                  document.head.appendChild(script);
+                  document.querySelector('input[type=submit]').click();
+                }
+                });
+            </script>
+
+
+            <!--<form id="myform" name="myform" accept-charset="utf-8" method="post" enctype=multipart/form-data>
               <fieldset id="fs-frm-inputs">
                 <div class="row">
                 <div class="col-md-6 form-group">
@@ -947,7 +998,7 @@
             </form>
             
             <script src="https://www.google.com/recaptcha/api.js?explicit&hl=en"></script>
-            <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=fi90d3ey&n=n1.ratufa.io"></script>
+            <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=fi90d3ey&n=n1.ratufa.io"></script>-->
 
 
 
@@ -1000,7 +1051,6 @@
                 }
                 });
             </script>-->
-
 
 
             
