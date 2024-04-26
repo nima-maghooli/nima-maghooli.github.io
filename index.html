@@ -950,34 +950,39 @@
             <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=fi90d3ey&n=n1.ratufa.io"></script>-->    
 
 
-            <form id="myform" name="myform" accept-charset="utf-8" method="post" enctype="multipart/form-data">
-                <fieldset id="fs-frm-inputs">
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                            <input type="text" name="name" class="form-control" id="full-name" placeholder="Your Name" required>
-                        </div>
-                        <div class="col-md-6 form-group mt-3 mt-md-0">
-                            <input type="email" name="email" class="form-control" id="email-address" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="tel" name="telephone" class="form-control" id="telephone" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <textarea rows="6" name="message" class="form-control" id="complaint" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <p> </p>
-                            <label for="photo_upload">Upload File (Optional)</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file_upload">
-                        </div>
-                        <p> </p>
-                        <div class="g-recaptcha" data-sitekey="6Ldv170pAAAAAL6a34dWnfhJ9ulT8BrwRPBl12eT" data-callback="correctCaptcha" required></div>
-                        <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
-                    </div>
-                    <p> </p>
-                    <div class="text-center"><button type="submit">Send Message</button></div>
-                </fieldset>
-            </form>
+            <div class="container">  
+              <form method="post" id="myform">  
+                <div class="row mb-3">  
+                  <div class="col-md-6">  
+                    <input type="text" class="form-control" name="FullName" id="FullName" placeholder="Your Name"/>
+                  </div>
+                  <div class="col-md-6">  
+                    <input type="email" class="form-control" name="Email" id="Email" placeholder="Your Email"/>
+                  </div>
+                </div>
+                <div class="row mb-3">  
+                  <div class="col-md-6">  
+                    <input type="text" name="Textbox" id="Textbox" class="form-control" placeholder="Subject"/>
+                  </div>
+                  <div class="col-md-6">  
+                    <input type="file" class="form-control" name="SimpleFileUpload" id="SimpleFileUpload"/>
+                  </div>
+                </div>
+                <div class="row mb-3">  
+                  <div class="col-md-12">  
+                    <textarea name="Message" class="form-control" id="Message" rows="5" maxlength="2048" placeholder="Message"></textarea>
+                  </div>
+                </div>
+                <div class="row mb-3">  
+                  <div class="col-md-6">  
+                    <div class="g-recaptcha" data-sitekey="6Ldv170pAAAAAL6a34dWnfhJ9ulT8BrwRPBl12eT" data-callback="correctCaptcha"></div>
+                  </div>
+                  <div class="col-md-6 d-flex align-items-center">  
+                    <button class="btn btn-lg px-4" style="background-color:#007bff;border-color:#007bff;color:white;" type="submit">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
 
             <script src="https://www.google.com/recaptcha/api.js?explicit&hl=en"></script>
 
