@@ -917,6 +917,103 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">         
+
+
+<form id="frmContact" action="" method="post">
+    <div id="mail-status"></div>
+    <div>
+        <label style="padding-top: 20px;">Name</label> <span
+            id="userName-info" class="info"></span><br /> <input
+            type="text" name="userName" id="userName"
+            class="demoInputBox">
+    </div>
+    <div>
+        <label>Email</label> <span id="userEmail-info" class="info"></span><br />
+        <input type="text" name="userEmail" id="userEmail"
+            class="demoInputBox">
+    </div>
+    <div>
+        <label>Attachment</label><br /> <input type="file"
+            name="attachmentFile" id="attachmentFile"
+            class="demoInputBox">
+    </div>
+    <div>
+        <label>Subject</label> <span id="subject-info" class="info"></span><br />
+        <input type="text" name="subject" id="subject"
+            class="demoInputBox">
+    </div>
+    <div>
+        <label>Content</label> <span id="content-info" class="info"></span><br />
+        <textarea name="content" id="content" class="demoInputBox"
+            cols="60" rows="6"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Send" class="btnAction" />
+    </div>
+</form>
+<div id="loader-icon" style="display: none;">
+    <img src="LoaderIcon.gif" />
+</div>
+
+$(document).ready(function (e){
+$("#frmContact").on('submit',(function(e){
+	e.preventDefault();
+	$('#loader-icon').show();
+	var valid;	
+	valid = validateContact();
+	if(valid) {
+		$.ajax({
+		url: "contact_mail.php",
+		type: "POST",
+		data:  new FormData(this),
+		contentType: false,
+		cache: false,
+		processData:false,
+		success: function(data){
+		$("#mail-status").html(data);
+		$('#loader-icon').hide();
+		},
+		error: function(){} 	        
+		
+		});
+	}
+}));
+
+require('phpmailer/class.phpmailer.php');
+$mail = new PHPMailer();
+$mail->IsSMTP();
+$mail->SMTPDebug = 0;
+$mail->SMTPAuth = TRUE;
+$mail->SMTPSecure = "tls";
+$mail->Port     = 587;  
+$mail->Username = "Your SMTP UserName";
+$mail->Password = "Your SMTP Password";
+$mail->Host     = "Your SMTP Host";
+$mail->Mailer   = "smtp";
+$mail->SetFrom($_POST["userEmail"], $_POST["userName"]);
+$mail->AddReplyTo($_POST["userEmail"], $_POST["userName"]);
+$mail->AddAddress("recipient address");	
+$mail->Subject = $_POST["subject"];
+$mail->WordWrap   = 80;
+$mail->MsgHTML($_POST["content"]);
+
+if(is_array($_FILES)) {
+	$mail->AddAttachment($_FILES['attachmentFile']['tmp_name'],$_FILES['attachmentFile']['name']); 
+}
+
+$mail->IsHTML(true);
+if(!$mail->Send()) {
+	echo "Problem in Sending Mail.";
+} else {
+	echo "Contact Mail Sent.";
+}
+
+
+
+
+
+
+
             
             <!--<form id="myform" name="myform" accept-charset="utf-8" method="post" enctype=multipart/form-data>
               <fieldset id="fs-frm-inputs">
@@ -950,7 +1047,12 @@
             <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=fi90d3ey&n=n1.ratufa.io"></script>-->    
 
 
-            <div class="container">  
+
+
+
+
+            
+            <!--<div class="container">  
               <form method="post" id="myform">  
                 <div class="row mb-3">  
                   <div class="col-md-6">  
@@ -997,7 +1099,7 @@
                   document.querySelector('input[type=submit]').click();
                 }
                 });
-            </script>
+            </script>-->
   
             <!-- Last Code <div class="container">  
               <form method="post" id="myform">  
