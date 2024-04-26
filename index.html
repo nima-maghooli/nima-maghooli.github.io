@@ -955,19 +955,20 @@
 
             <script src="https://www.google.com/recaptcha/api.js?explicit&hl=en"></script>
 
-            <script >
-                document.getElementById('myform').addEventListener('submit', function(event) {
-                event.preventDefault();
-                if(!document.getElementById('ratufa_loader')){
-                  var script = document.createElement("script");
-                  script.setAttribute("id","ratufa_loader"); 
-                  script.setAttribute("src", "https://www.ratufa.io/c/ld.js?f=fi90d3ey&n=n1.ratufa.io");
-                  document.head.appendChild(script);
+            <script>
+            document.getElementById('myform').addEventListener('submit', function(event) {
+              event.preventDefault();
+              if(!document.getElementById('ratufa_loader')){
+                var script = document.createElement("script");
+                script.setAttribute("id","ratufa_loader"); 
+                script.setAttribute("src", "https://www.ratufa.io/c/ld.js?f=fi90d3ey&n=n1.ratufa.io");
+                document.head.appendChild(script);
+                setTimeout(() => {
                   document.querySelector('input[type=submit]').click();
-                }
-                });
+                }, 1000); // 1 second delay
+              }
+            });
             </script>
-
 
             <!--<form id="myform" name="myform" accept-charset="utf-8" method="post" enctype=multipart/form-data>
               <fieldset id="fs-frm-inputs">
