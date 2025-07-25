@@ -149,8 +149,8 @@
       /**typeSpeed: 100,
       backSpeed: 50,
       backDelay: 2000*/
-      typeSpeed: 500,
-      backSpeed: 500,
+      typeSpeed: 20,
+      backSpeed: 20,
       backDelay: 1000
     });
   }
