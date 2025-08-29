@@ -75,7 +75,13 @@
             </div>-->
             <div class="portfolio-description">
               <h2>Further detail</h2>
-              <p>In this work, we present a centralized position control strategy using Deep Reinforcement Learning (DDPG algorithm) to design an optimal adaptive gain tuner for a Modified Transpose Jacobian controller. Our method enables Sim-to-Real transfer and has been successfully implemented on a real TDCR developed in ARAS (Robo-Arm).</p>
+              <ul>
+                
+                <li><strong>Slide #1: </strong>In this research, a customized Modified Transpose Jacobian control algorithm for TDCRs is proposed by incorporating the null-space projection operator, aiming to prevent tendon slack and address redundancy resolution. As illustrated in the block diagram, the DRL agent optimally adapts the control gains in real time. </a></li> 
+                
+                <li><strong>Slide #2: </strong>Implementing kinetic control, despite using kinematic actuators, involves a cascaded control structure with an inner loop to regulate tendon tensions. In this structure, feedback from load cells is used to compute the tendon tensions, which are then compared to the desired values. The tension error is fed into the inner-loop PID controller, and the resulting motor velocity command is sent to the servomotor. </a></li> 
+                
+              </ul>
             </div>
           </div>
 
