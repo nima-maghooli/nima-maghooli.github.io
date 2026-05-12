@@ -254,34 +254,30 @@
   on: {
     slideChangeTransitionEnd: function () {
 
-      // شماره اسلاید ویدئو
-      const videoSlideIndex = 1;
+      // اسلاید فعال
+      const activeSlide = this.slides[this.activeIndex];
 
-      // اگر روی اسلاید ویدئو هستیم
-      if (this.realIndex === videoSlideIndex) {
+      // آیا داخلش ویدئو هست؟
+      const video = activeSlide.querySelector('video');
+
+      // اگر ویدئو وجود داشت
+      if (video) {
 
         // توقف autoplay
         this.autoplay.stop();
 
-        // پخش ویدئو
-        const video = document.querySelector('.videoTest');
+        // ریست و پخش ویدئو
+        video.currentTime = 0;
+        video.play();
 
-        if (video) {
-          video.currentTime = 0;
-          video.play();
-        }
-
-        // بعد از 26 ثانیه رفتن به اسلاید بعد
-        setTimeout(() => {
-
-          if (video) {
-            video.pause();
-          }
+        // بعد از پایان ویدئو
+        video.onended = () => {
 
           this.slideNext();
-          this.autoplay.start();
 
-        }, 26000);
+          // ادامه autoplay
+          this.autoplay.start();
+        };
       }
     }
   }
