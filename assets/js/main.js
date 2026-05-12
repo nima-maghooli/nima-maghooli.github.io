@@ -220,7 +220,7 @@
 
   /**
    * Portfolio details slider
-   */
+   
   new Swiper('.portfolio-details-slider', {
     speed: 400,
     loop: true,
@@ -234,7 +234,62 @@
       clickable: true
     }
   });
+  */
 
+  const swiper = new Swiper('.portfolio-details-slider', {
+  speed: 400,
+  loop: true,
+
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
+  },
+
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+
+  on: {
+    slideChangeTransitionEnd: function () {
+
+      // شماره اسلاید ویدئو
+      const videoSlideIndex = 1;
+
+      // اگر روی اسلاید ویدئو هستیم
+      if (this.realIndex === videoSlideIndex) {
+
+        // توقف autoplay
+        this.autoplay.stop();
+
+        // پخش ویدئو
+        const video = document.querySelector('.videoTest');
+
+        if (video) {
+          video.currentTime = 0;
+          video.play();
+        }
+
+        // بعد از 26 ثانیه رفتن به اسلاید بعد
+        setTimeout(() => {
+
+          if (video) {
+            video.pause();
+          }
+
+          this.slideNext();
+          this.autoplay.start();
+
+        }, 26000);
+      }
+    }
+  }
+});
+
+
+
+  
   /**
    * Testimonials slider
    */
